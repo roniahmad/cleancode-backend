@@ -1,0 +1,17 @@
+appIssuer: "wetees.com"
+appName: "WantToSell.com API"
+version: "v0.0.1"
+mode: "dev"
+contextTimeout: 2
+accessTokenExpiry: 178
+accessTokenSecret: BMaYJ3Q5LsG4vqdXpFVcHxeTz9yrAR86
+secretKey: qXURCjZVx3wGt2KNaLgmSkfv74synHcD
+servicePort: 8080
+logtype: json
+logLevel: debug
+db:
+  host: localhost
+  port: 3306
+  user: admin
+  pass: S3cret0k3!
+  dbName: wetees
