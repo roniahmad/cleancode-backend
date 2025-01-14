@@ -1,7 +1,8 @@
-# BackEnd with Golang Clean Architecture
+# Golang backend with clean architecture and JWT authentication
 
 ## Description
-This is backend developed with golang clean architecture.
+
+This is a ready to use Golang backend with clean architecture and JWT authentication.
 
 ## Prerequisite
 
