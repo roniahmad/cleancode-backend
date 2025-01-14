@@ -1,0 +1,621 @@
+{
+	"info": {
+		"_postman_id": "2cb53b1c-ecc8-4ef9-bf6a-28e328215a2b",
+		"name": "WeTeEs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4969766"
+	},
+	"item": [
+		{
+			"name": "Health Check",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/healthz",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"healthz"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "antonio.conte@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "Alex Ferguson",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "alex.ferguson@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Change Password",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFudG9uaW8uY29udGVAZ21haWwuY29tIiwiaWQiOiIxNiIsImlzcyI6IndldGVlcy5jb20iLCJleHAiOjE3MzY1NDA2OTAsIm5iZiI6MTczNTg5OTg5MCwiaWF0IjoxNzM1ODk5ODkwfQ.Z_76rCnLhkG0_sKqSsazrM7qOLk0vT75OeRnULEmsps",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "old_password",
+							"value": "admin1",
+							"type": "text"
+						},
+						{
+							"key": "new_password",
+							"value": "admin",
+							"type": "text"
+						},
+						{
+							"key": "confirm_password",
+							"value": "admin",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/changepassword",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"changepassword"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/viewproduct?page=1&limit=2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"viewproduct"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/searchproduct?item=kem&page=1&limit=4",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"searchproduct"
+					],
+					"query": [
+						{
+							"key": "item",
+							"value": "kem"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Order",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFudG9uaW8uY29udGVAZ21haWwuY29tIiwiaWQiOiIxNiIsImlzcyI6IndldGVlcy5jb20iLCJleHAiOjE3MzY1NzgxNzIsIm5iZiI6MTczNTkzNzM3MiwiaWF0IjoxNzM1OTM3MzcyfQ.oCmejm2WDXSa4yxTOSDLKmLCI_lcnV5_06jTwg8Oi8w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/order",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cancel Order",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFudG9uaW8uY29udGVAZ21haWwuY29tIiwiaWQiOiIxNiIsImlzcyI6IndldGVlcy5jb20iLCJleHAiOjE3MzY1NzgxNzIsIm5iZiI6MTczNTkzNzM3MiwiaWF0IjoxNzM1OTM3MzcyfQ.oCmejm2WDXSa4yxTOSDLKmLCI_lcnV5_06jTwg8Oi8w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "order_id",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/cancelorder",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"cancelorder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Checkout Order",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFudG9uaW8uY29udGVAZ21haWwuY29tIiwiaWQiOiIxNiIsImlzcyI6IndldGVlcy5jb20iLCJleHAiOjE3MzY1NzgxNzIsIm5iZiI6MTczNTkzNzM3MiwiaWF0IjoxNzM1OTM3MzcyfQ.oCmejm2WDXSa4yxTOSDLKmLCI_lcnV5_06jTwg8Oi8w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "order_id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/checkout",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"checkout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Order Item",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFudG9uaW8uY29udGVAZ21haWwuY29tIiwiaWQiOiIxNiIsImlzcyI6IndldGVlcy5jb20iLCJleHAiOjE3MzY1NzgxNzIsIm5iZiI6MTczNTkzNzM3MiwiaWF0IjoxNzM1OTM3MzcyfQ.oCmejm2WDXSa4yxTOSDLKmLCI_lcnV5_06jTwg8Oi8w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "order_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "product_id",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "quantity",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/additem",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"additem"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Order Item Quantity",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFudG9uaW8uY29udGVAZ21haWwuY29tIiwiaWQiOiIxNiIsImlzcyI6IndldGVlcy5jb20iLCJleHAiOjE3MzY1NzgxNzIsIm5iZiI6MTczNTkzNzM3MiwiaWF0IjoxNzM1OTM3MzcyfQ.oCmejm2WDXSa4yxTOSDLKmLCI_lcnV5_06jTwg8Oi8w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "order_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "product_id",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "quantity",
+							"value": "10",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/updateqty",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"updateqty"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove Order Item",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFudG9uaW8uY29udGVAZ21haWwuY29tIiwiaWQiOiIxNiIsImlzcyI6IndldGVlcy5jb20iLCJleHAiOjE3MzY1NzgxNzIsIm5iZiI6MTczNTkzNzM3MiwiaWF0IjoxNzM1OTM3MzcyfQ.oCmejm2WDXSa4yxTOSDLKmLCI_lcnV5_06jTwg8Oi8w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "order_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "product_id",
+							"value": "4",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/deleteitem",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"deleteitem"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "4",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deposit",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFudG9uaW8uY29udGVAZ21haWwuY29tIiwiaWQiOiIxNiIsImlzcyI6IndldGVlcy5jb20iLCJleHAiOjE3MzY1NzgxNzIsIm5iZiI6MTczNTkzNzM3MiwiaWF0IjoxNzM1OTM3MzcyfQ.oCmejm2WDXSa4yxTOSDLKmLCI_lcnV5_06jTwg8Oi8w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "acc_number",
+							"value": "5550000001",
+							"type": "text"
+						},
+						{
+							"key": "amount",
+							"value": "150",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/deposit",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"deposit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Withdraws",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFudG9uaW8uY29udGVAZ21haWwuY29tIiwiaWQiOiIxNiIsImlzcyI6IndldGVlcy5jb20iLCJleHAiOjE3MzY1NzgxNzIsIm5iZiI6MTczNTkzNzM3MiwiaWF0IjoxNzM1OTM3MzcyfQ.oCmejm2WDXSa4yxTOSDLKmLCI_lcnV5_06jTwg8Oi8w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "acc_number",
+							"value": "5550000001",
+							"type": "text"
+						},
+						{
+							"key": "amount",
+							"value": "50",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/withdraws",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"withdraws"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
