@@ -26,6 +26,7 @@ type (
 		ServicePort       string   `mapstructure:"servicePort" validate:"required"`
 		Logtype           string   `mapstructure:"logtype" validate:"required"`
 		LogLevel          string   `mapstructure:"logLevel" validate:"required"`
+		RateLimit         int      `mapstructure:"rateLimit" validate:"required"`
 		Db                Database `mapstructure:"db" validate:"required"`
 	}
 )

@@ -9,6 +9,7 @@ secretKey: qXURCjZVx3wGt2KNaLgmSkfv74synHcD
 servicePort: 8080
 logtype: json
 logLevel: debug
+rateLimit: 3
 db:
   host: localhost
   port: 3306
